@@ -1,21 +1,22 @@
-import { useState } from "react"
-import React from "react"
-import ButtonComponent from "./components/buttons"
-import PracticeUseRef from "./components/PracticeRef"
-import LogRef from "./components/PracticeLog"
+// import { useState } from "react"
+// import React from "react"
+// import ButtonComponent from "./components/Buttons"
+// import PracticeUseRef from "./components/PracticeRef"
+// import LogRef from "./components/PracticeLog"
+import StandardForm from "./components/Standard"
 function App() {
-  const [counter, setCounter] = useState<number>(0)
-  const [start, setCountStart] = useState<number>(0)
+  // const [counter, setCounter] = useState<number>(0)
+  // const [start, setCountStart] = useState<number>(0)
 
-  const handleStartCounter = (e: React.ChangeEvent<HTMLInputElement>)=>{
-    e.preventDefault()
-    const value = Number(e.target.value)
-    setCountStart(value)
-    setCounter(value)
-  }
+  // const handleStartCounter = (e: React.ChangeEvent<HTMLInputElement>)=>{
+  //   e.preventDefault()
+  //   const value = Number(e.target.value)
+  //   setCountStart(value)
+  //   setCounter(value)
+  // }
   return (
     <div>
-      <form>
+      {/* <form>
         <h1>count starts at: </h1>
         <input type="number" onChange={handleStartCounter} value={start}/>
       </form>
@@ -29,7 +30,9 @@ function App() {
 
       <div>
         <LogRef />
-      </div>
+      </div> */}
+
+      <StandardForm />
     </div>
   )
 }
