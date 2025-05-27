@@ -2,6 +2,7 @@ import { useState } from "react"
 import React from "react"
 import ButtonComponent from "./components/buttons"
 import PracticeUseRef from "./components/PracticeRef"
+import LogRef from "./components/PracticeLog"
 function App() {
   const [counter, setCounter] = useState<number>(0)
   const [start, setCountStart] = useState<number>(0)
@@ -24,6 +25,10 @@ function App() {
 
       <div>
         <PracticeUseRef />
+      </div>
+
+      <div>
+        <LogRef />
       </div>
     </div>
   )

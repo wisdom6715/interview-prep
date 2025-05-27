@@ -1,16 +1,18 @@
-import {useRef} from "react"
+import { useRef, useEffect } from "react";
 
-const PracticeUseRef = () =>{
-    const focusRef = useRef<HTMLInputElement>(null)
-    const focusInput = ()=>[
-        focusRef?.current?.focus()
-    ]
-    return(
-        <div>
-            <input type="text" ref={focusRef} />
-            <button onClick={focusInput}>focus</button>
-        </div>
-    )
-}
+const PracticeUseRef = () => {
+  const countRef = useRef<number>(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      countRef.current += 1;
+      console.log("Timer:", countRef.current);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return <p>Check console for timer count: {countRef.current}</p>;
+};
 
 export default PracticeUseRef
