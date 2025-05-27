@@ -4,6 +4,7 @@
 // import PracticeUseRef from "./components/PracticeRef"
 // import LogRef from "./components/PracticeLog"
 import StandardForm from "./components/Standard"
+import FormDataFunction from "./components/FormData"
 function App() {
   // const [counter, setCounter] = useState<number>(0)
   // const [start, setCountStart] = useState<number>(0)
@@ -33,6 +34,10 @@ function App() {
       </div> */}
 
       <StandardForm />
+
+      <div style={{marginTop: '5rem'}}>
+        <FormDataFunction />
+      </div>
     </div>
   )
 }
