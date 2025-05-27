@@ -12,9 +12,17 @@ const StandardForm = () =>{
     const handleSubmission = (e: React.FormEvent)=>{
         e.preventDefault()
         console.log(user)
+        if(user.name === ''){
+            return alert('name cannot be empty')
+        } else if(Number(user.age) < 18){
+            return alert('users less than 18 are not allowed')
+        } else if (!user.email.includes('@')){
+            return alert('email is invalid')
+        }
         setUser({
             name: '', email: '', phoneNumber: '' , age: ''
         })
+
     }
 
     return(
